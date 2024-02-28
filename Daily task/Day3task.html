@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries API</title>
+</head>
+<body>
+    <script>
+
+        // This piece of code contains both the task on day 3 - Displaying of flags and Country Name,Region etc
+        
+        var request = new XMLHttpRequest();
+        request.open('GET','https://restcountries.com/v3.1/all');
+        request.send();
+        request.onload = function(){
+            var countriesData = JSON.parse(request.response)
+            console.log(countriesData)
+            for(i=0;i<countriesData.length;i++){
+                console.log("Country Flag: "+countriesData[i].flag)
+                console.log("Country Name:"+countriesData[i].name.common+", Region:"+countriesData[i].region+", Sub Region:"+countriesData[i].subregion+", Populations:"+countriesData[i].population)
+            }
+        }
+    </script>
+</body>
+</html>
