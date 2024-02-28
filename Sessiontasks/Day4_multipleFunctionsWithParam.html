@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Normal Function
+        // function addition(a,b,c){
+        //     var result = a+b+c;
+        //     console.log(result);
+        // }
+
+        // addition(10,10,1000);
+
+        function totalSubjects(totalSubjects){
+            var a = totalSubjects*100
+            return a;
+        }
+
+        var subjects = totalSubjects(4);
+
+        function marksObtain(M,E,S,H){
+            var total=M+E+S+H
+            return total;
+
+        }
+
+        var marks = marksObtain(100,95,80,90)
+
+        function percentage(totalMarks,totalSubjects){
+            var result = totalMarks/totalSubjects*100
+            // console.log("Percentage :"+result);
+            return result;
+        }
+
+        var a = percentage(marks,subjects)
+        
+        console.log("Total Marks Obtained :"+ marks)
+        console.log("Total Subjects :"+subjects)
+        console.log("Percentage :"+a);
+        
+        
+        
+    </script>
+</body>
+</html>
