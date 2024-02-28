@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //STEP 1: Create a XHR Object to interact with an server with a new keyword
+
+        var request = new XMLHttpRequest();
+
+        //STEP 2 : Open a connection so that it can be processed
+        // Contains 3 Parameters
+            //HTTP Method - GET
+            //URL ->https://restcountries.com/v3.1/all
+            //True or false - Optional parameter
+
+        request.open('GET',"https://restcountries.com/v3.1/all");
+
+        //STEP 3: Sending a connection / Initiating a Bridge
+
+        request.send();
+
+        //Step 4 - Server response - Whenever a page is loaded give me an data - Onload Event
+        //onload is an Global event and accepts only annonymous function
+
+        request.onload=function(){
+           var countriesData = JSON.parse(request.response);
+        //    console.log(countriesData)
+        //    console.log(countriesData.length)
+        //    console.log(countriesData[1].capital)
+        for(i=0;i<countriesData.length;i++){
+            console.log("Country Name: "+ countriesData[i].name.common+" ,Capital City: "+countriesData[i].capital+", Area: "+countriesData[i].area)
+        }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
