@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Car{
+            constructor(name,year,model,fueltype){
+                this.name = name,
+                this.year = year,
+                this.model = model,
+                this.fueltype = fueltype
+            }
+
+            getYear(){
+                console.log(this.year)
+            }
+        }
+
+        var s1 = new Car("Audi",2023,"Q4","Petrol")
+        console.log(s1)
+
+        s1.getYear()
+
+        s1.year=2024
+
+        console.log(s1)
+
+        var s2 = new Car("Maruti",2024,"Baleno","Diesel")
+        console.log(s2)
+
+        s2.getYear()
+    </script>
+</body>
+</html>

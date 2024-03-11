@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3]
+        console.log(arr)
+        var result = arr.map((Element,Index)=>Element*2)
+        console.log(result)
+
+        var arr1=["1","2","3"]
+        var result2= arr1.map((element)=>parseInt(element*2))
+        console.log(result2)
+
+        let users=
+        [
+            {fname:"abc",lname:"def"},
+            {fname:"pqr",lname:"swt"},
+            {fname:"xyz",lname:"lmn"}
+        ]
+
+        let usersfullname = users.map((element)=>`fname-${element.fname} Lname-${element.lname}`)
+        console.log(usersfullname)
+    </script>
+</body>
+</html>
