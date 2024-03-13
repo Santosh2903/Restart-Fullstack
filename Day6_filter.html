@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students=[
+            {
+                name:"alex",
+                marks:50
+            },
+            {
+                name:"alex",
+                marks:60
+            },
+            {
+                name:"alex",
+                marks:40
+            },
+        ]
+
+        var studentmarks = students.filter((element)=>(element.marks>50))
+        console.log(...studentmarks)
+
+        var studentmarks1 = students.filter((element)=>(element.marks>50)).map((element)=>element.name)
+        console.log(...studentmarks1)
+    </script>
+</body>
+</html>
